@@ -2,15 +2,17 @@ package CrashCourse;
 
 public class MyKnight {
     
-    String characterName;
-    int health;
-    boolean isSafeZone;
-    int weaponDurability;
-    int staminaAmount;
-    int age;
-    int armorDurability;
-    boolean isRunning;
-    String weaponChoice;
+    private String characterName;
+    private int health;
+    private boolean isSafeZone;
+    private int weaponDurability;
+    private int staminaAmount;
+    private int age;
+    private int armorDurability;
+    private  boolean isRunning;
+    private String weaponChoice;
+    private double attackPower;
+    
 
     public MyKnight(String characterName, int age, String weaponChoice) {
 
@@ -24,6 +26,7 @@ public class MyKnight {
         staminaAmount = 100;
         armorDurability = 100;
         isRunning = false;
+        attackPower = 20.0;
 
     }
 
@@ -32,13 +35,21 @@ public class MyKnight {
         staminaAmount -= 10;
         if (staminaAmount < 0){
             staminaAmount = 0;
+        } else {
+            isRunning = false;
         }
-    }
+    
+    } 
 
     public void attack() {
         weaponDurability -= 2;
         if (weaponDurability < 0){
             weaponDurability = 0;
+        System.out.println(characterName + " attacked with " + weaponChoice);
+        } if (weaponDurability < 50) {
+            attackPower -= 10.0;
+        }else {
+            System.out.println(characterName = "', weapon broke");
         }
     }
 
@@ -69,6 +80,15 @@ public class MyKnight {
         isSafeZone = true;
     }
 
+    public void heal(int amount) {
+        if(amount > 0) {
+            health += amount;
+        } if(health > 100) {
+            health = 100;
+        } else {
+            System.out.println("The healing amount must be positive");
+        }
+    }
 
 
 }
