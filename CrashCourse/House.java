@@ -1,5 +1,3 @@
-package CrashCourse;
-
 public class House {
     
     private String material;
@@ -24,6 +22,40 @@ public class House {
 
     }
 
+    public void newOwner(String name) {
+        ownerName = name;
+        System.out.println("The new owner of the house is " + ownerName);
 
+    }
+
+    public void breakWindow() {
+        windows--;
+    }
+
+    public void turnOnLight() {
+        isLightOn = true;
+    }
+
+    public void turnOffLight() {
+        isLightOn = false;
+    }
+
+    public void enterHouse() {
+        isOccupied = true;
+        System.out.println("The house is now occupied.");
+    }
+
+    public void exitHouse() {
+        isOccupied = false;
+        System.out.println("The house is now unoccupied.");
+    }
+
+    public void houseDestruction() {
+        squareFootage -= 100.0;
+        System.out.println("The house has been damaged. Square footage: " + squareFootage);
+    }
+
+
+    
 
 }
