@@ -1,4 +1,3 @@
-package CrashCourse;
 
 public class Knight {
 

@@ -1,4 +1,3 @@
-package CrashCourse;
 // If your Java file isn't running, you *might* need to add the following line and uncomment it, at the top of your file: 
 // package CrashCourse (the name of the folder that includes CrashCourse.java)
 
