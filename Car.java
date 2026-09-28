@@ -34,6 +34,26 @@ public class Car {
         ownerName = "Dilshan";
 
     }
+
+    public String getCarLicensePlate() {
+        System.out.println(carLicensePlate);
+        return carLicensePlate;
+    }
+
+    public boolean getIsElectric() {
+        System.out.println("Is car electric:" + " " + isElectric);
+        return isElectric;
+    }
+
+    public int getWindowCount() {
+        System.out.println("The window count is" + " " + windowCount);
+        return windowCount;
+    }
+
+    public int getDoorCount() {
+        System.out.println("The door count is" + " " + doorCount);
+        return doorCount;
+    }
   
     public void startCar() {
         isRunning = true;
