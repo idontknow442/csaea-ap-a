@@ -17,7 +17,7 @@ public class EmailTester {
         System.out.println(word.indexOf("B"));
         
         Email michael = new Email("mharrell@nhvweb.net");
-        Email jojo = new Email("jojo@nhvweb.net");
+        Email jojo = new Email("jojo@gmail.com");
 
         System.out.println(michael.toString());
 
