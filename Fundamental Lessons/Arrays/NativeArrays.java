@@ -66,12 +66,12 @@ public class NativeArrays {
         // Multiply every element by 2, then print the array.
         int[] challengeOne = {3, 7, 1, 9, 4};
         // TODO: your loop here
+        for (int i = 0; i < nums.length; i ++) {
+                System.out.println(" index " + i + " -> value " + nums[i] * 2);
 
 
         // EXAMPLE: Modified for loop that prints only even elements
-        for (int i = 0; i < nums.length; i += 2) {
-
-                System.out.println(" index " + i + " -> value " + nums[i]);
+      
 
         }
 
@@ -80,12 +80,47 @@ public class NativeArrays {
         int[] challengeTwo = {3, 7, 1, 9, 4};
         // TODO: your loop here
 
+        for (int i = 0; i < nums.length; i += 2) {
+                System.out.println(" index " + i + " -> value " + nums[i] + 10);
+        }
+
         // Challenge 3: Replace Negatives
         // Change every negative number to 0, then print.
         int[] temps = {5, -3, 8, -1, 0, -7};
         // TODO: your loop here
         // HINTS: use an if statement in each pass of the loop
         // redefine element value like this: nums[2] = 6;
+
+        // Challenge: Curve the Scores
+        // int[] scores = {85, 62, 97, 45, 70, 99};
+        int[] scores = {85, 62, 97, 45, 70, 99};
+        // Add 5 to every score, but no score can go above 100. 
+        for (int i = 0; i < scores.length; i++) {
+                scores[i] = Math.min(scores[i] + 5, 100);
+        }
+
+        // Challenge: Find the Highest
+        // int[] temps = {58, 71, 64, 80, 77, 69};
+        int[] temps = {58, 71, 64, 80, 77, 69};
+        int highestTemp = temps[0];
+        int highestIndex = 0;
+        for (int i = 1; i < temps.length; i++) {
+                if (temps[i] > highestTemp) {
+                        highestTemp = temps[i];
+                        highestIndex = i;
+                }
+        }
+        System.out.println("Highest temperature: " + highestTemp + " at index " + highestIndex);
+        // Use a loop to find the highest temperature and the index it's at, then print both. Use Math.max()!
+
+
+        // Challenge: Random Fill
+        // int[] nums = new int[10];
+        // Loop 10 times. Each time, use Math.random() to get a random number from 1 to 100 and a random index from 0 to 9, then put the number at that index. Print the array. 
+        // Then answer: why are some spots still 0?
+
+
+
 
 
 
